@@ -7,11 +7,10 @@
     <body>
         <h1>Heroes</h1>
         <?php foreach($Heroes as $key => $value) { ?>
-            <h3><?php echo $key; ?></h3>
-            <span>Name:</span><?php echo $value['name']; ?>
-            <span><br />Spell 1:</span><?php echo $value['Spell 1']; ?>
-            <span><br />Spell 2:</span><?php echo $value['Spell 2']; ?>
-            <span><br />Spell 3:</span><?php echo $value['Spell 3']; ?>
+            <h3><?php echo $value['name']; ?></h3>
+            <span><br />Spell 1:</span><?php echo $value['Spell1']; ?>
+            <span><br />Spell 2:</span><?php echo $value['Spell2']; ?>
+            <span><br />Spell 3:</span><?php echo $value['Spell3']; ?>
             <span><br />Ultimate:</span><?php echo $value['Ultimate']; ?>
             <span><br />Type:</span><?php echo $value['Type']; ?>
         <?php } ?>
