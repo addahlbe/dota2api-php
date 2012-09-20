@@ -1,6 +1,6 @@
 <html>
     <head>
-        <A Name = "TOP".</A>
+        <a name="TOP"></a>
         <a href="/index.php">Home</a>
         <title>Dota2 API - Items</title>
     </head>
@@ -14,6 +14,6 @@
             <span><br />Required sub-items:</span><?php echo $value['required']; ?>
         <?php } ?>
         <br />
-        <A HREF="#TOP">Go To Top of Page <A>
+        <a href="#TOP">Go To Top of Page</a>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
     <head>
-    	<A Name = "TOP".</A>
-    	<a href="/index.php">Home</a>	
+    	<a name="TOP"></a>
+    	<a href="/index.php">Home</a>
         <title>Dota2 API - Heroes</title>
     </head>
     <body>
@@ -15,6 +15,6 @@
             <span><br />Type:</span><?php echo $value['Type']; ?>
         <?php } ?>
         <br />
-        <A HREF="#TOP">Go To Top of Page <A>
+        <a href="#TOP">Go To Top of Page</a>
     </body>
 </html>
