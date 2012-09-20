@@ -6,9 +6,8 @@
     </head>
     <body>
         <h1>Items</h1>
-        <?php foreach($items as $key => $value) { ?>
-            <h3><?php echo $key; ?></h3>
-            <span>Name:</span><?php echo $value['name']; ?>
+        <?php foreach($Items as $key => $value) { ?>
+            <h3><?php echo $value['name']; ?></h3>
             <span><br />Cost:</span><?php echo $value['cost']; ?>
             <span><br />Details:</span><?php echo $value['details']; ?>
             <span><br />Effects:</span><?php echo $value['effects']; ?>
