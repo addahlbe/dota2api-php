@@ -1,16 +1,14 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set("display_errors", 1);
-    $dbc = mysqli_connect('localhost', 'root', 'root', 'dota2api')
-    or die('Error connecting to MYSQL server.');
+    include 'config.php';
 
-    $query = "SELECT * FROM items WHERE 1=1";
+    error_reporting(ERROR_REPORTING);
+    ini_set("display_errors", DISPLAY_ERRORS);
 
-    $result = mysqli_query($dbc, $query);
-    $Items = array();
-    while($row = mysqli_fetch_array($result)){
-        array_push($Items, $row);
-    }
-    mysqli_close($dbc);
+    include 'utils/db.php';
+
+    $db = new DB();
+    $Items = $db->query("SELECT * FROM items WHERE 1=1");
+    $db->close();
+
     include 'templates/items.php';
 ?>
