@@ -47,14 +47,14 @@ function unregisterGlobals() {
 /** Main Call Function **/
 
 function callHook() {
-    # /item/list/1/2
+    # /items/list
     global $url;
 
     $urlArray = array();
-    # array("item", "list", "1", "2")
+    # array("items", "list", "1", "2")
     $urlArray = explode("/",$url); // in python, str.split("/")
 
-    # $controller = 'item'
+    # $controller = 'items'
     $controller = $urlArray[0];
     array_shift($urlArray);
     # array("list", "1", "2")
@@ -64,15 +64,15 @@ function callHook() {
     $queryString = $urlArray;
 
     $controllerName = $controller;
-    # $controllerName = 'item'
+    # $controllerName = 'items'
     $controller = ucwords($controller);
-    # $controller = 'Item'
+    # $controller = 'Items'
     $model = rtrim($controller, 's');
-    # $model = 'Items'
+    # $model = 'Item'
     $controller .= 'Controller';
-    # $controller = 'ItemController'
+    # $controller = 'ItemsController'
     $dispatch = new $controller($model,$controllerName,$action);
-    # $dispatch = new ItemController('items', 'item', 'list')
+    # $dispatch = new ItemsController('items', 'item', 'list')
 
     if ((int)method_exists($controller, $action)) {
         call_user_func_array(array($dispatch,$action),$queryString);
